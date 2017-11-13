@@ -3,6 +3,7 @@ const server = require('express')();
 const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 // import configurations
 const serverConfig = require('./configs/Server');
@@ -13,6 +14,9 @@ mongoose.Promise = global.Promise;  //replace mongoose's depricated Promise with
 mongoose.connect(process.env.PORT ? dbConfig.mlabDb : dbConfig.localDb)
 .then(()=>console.log('Connected to database!'))
 .catch(err => console.log(err));
+
+// use cors to allow any origin
+server.use(cors());
 
 // parse application/x-www-form-urlencoded
 server.use(bodyParser.urlencoded({ extended: false }))
