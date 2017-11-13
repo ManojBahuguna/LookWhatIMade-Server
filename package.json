@@ -1,0 +1,24 @@
+{
+  "name": "lookwhatimade-server",
+  "version": "1.0.0",
+  "description": "Allows users to keep track of projects they have created.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManojBahuguna/LookWhatIMade-Server.git"
+  },
+  "author": "Manoj Bahuguna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ManojBahuguna/LookWhatIMade-Server/issues"
+  },
+  "homepage": "https://github.com/ManojBahuguna/LookWhatIMade-Server#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.1"
+  }
+}
