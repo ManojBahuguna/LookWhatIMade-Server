@@ -4,6 +4,7 @@
   "description": "Allows users to keep track of projects they have created.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -10,7 +10,7 @@ const dbConfig = require('./configs/Database');
 
 // connect to mongo database
 mongoose.Promise = global.Promise;  //replace mongoose's depricated Promise with global promise
-mongoose.connect(dbConfig.localDb)
+mongoose.connect(process.env.PORT ? dbConfig.mlabDb : dbConfig.localDb)
 .then(()=>console.log('Connected to database!'))
 .catch(err => console.log(err));
 
