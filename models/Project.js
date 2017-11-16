@@ -27,7 +27,7 @@ const projectSchema = mongoose.Schema({
 
 const Project = mongoose.model('User', projectSchema);
 
-Project.publicFields = ['title', 'link', 'info', 'sourceCodeLink', 'imageURL', 'tags', 'likes', 'dateStarted', 'dateFinished', 'dateAdded'];  //list of fields that can be sent to user
+Project.publicFields = ['_id', 'title', 'link', 'info', 'sourceCodeLink', 'imageURL', 'tags', 'likes', 'dateStarted', 'dateFinished', 'dateAdded'];  //list of fields that can be sent to user
 
 Project.filterFields = project => {  //function that receives the project object and return another object with just the public fields
   let filteredObject = {};

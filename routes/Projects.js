@@ -61,7 +61,7 @@ router.post('/', function(req, res){
     let newProject = new Project();
     if(data.title)
       newProject.title = data.title;
-    if(date.link)
+    if(data.link)
       newProject.link = data.link;
     if(data.info)
       newProject.info = data.info;
