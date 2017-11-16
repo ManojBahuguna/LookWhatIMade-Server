@@ -57,10 +57,24 @@ router.get('/:id', function(req, res){
 router.post('/', function(req, res){
   const data = req.body;
   // console.log(data);
-  console.log(Project.filterFields({title: 123, abc: 455}));
   if(data){
     let newProject = new Project();
-    newProject.title = data.title;
+    if(data.title)
+      newProject.title = data.title;
+    if(date.link)
+      newProject.link = data.link;
+    if(data.info)
+      newProject.info = data.info;
+    if(data.sourceCodeLink)
+      newProject.sourceCodeLink = data.sourceCodeLink;
+    if(data.imageURL)
+      newProject.imageURL = data.imageURL;
+    if(data.tags)
+      newProject.tags = data.tags;
+    if(data.dateStarted)
+      newProject.dateStarted = data.dateStarted;
+    if(data.dateFinished)
+      newProject.dateFinished = data.dateFinished;
     newProject.save()
     .then(doc => 
       res.send({
