@@ -21,7 +21,7 @@ const projectSchema = mongoose.Schema({
   dateFinished: Date,
   dateAdded: {
     type: Date,
-    default: Date.now
+    default: Date.now()
   }
 });
 
